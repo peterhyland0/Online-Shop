@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        {{ form.name() }}
+        {% for error in form.name.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.price.label }}
+        {{ form.price() }}
+        {% for error in form.price.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.description.label }}
+        {{ form.description() }}
+        {% for error in form.description.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.image_name.label }}
+        {{ form.image_name() }}
+        {% for error in form.image_name.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+    </form>
+    <p>
+        The shop item database will be updated upon submission.
+    </p>
+    
+{% endblock %} 

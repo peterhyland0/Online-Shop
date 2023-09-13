@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>Our Users</h1>
+    <table>
+        {% for user in users %}
+            <tr>
+                <td>{{ user["user_id"] }}</td>
+                <td>{{ user["password"] }}</td>
+                <td>{{ user["date_birth"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %} 

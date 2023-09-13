@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>{{ user["user_id"] }}</h1>
+    <p>
+         {{ user["password"] }}
+    </p>
+    <p>
+        {{ user["date_birth"] }}
+    </p>
+    
+{% endblock %} 

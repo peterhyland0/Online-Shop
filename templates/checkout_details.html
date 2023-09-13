@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.address.label }}
+        {{ form.address() }}
+        {% for error in form.address.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.hidden_tag() }}
+        {{ form.card_name.label }}
+        {{ form.card_name() }}
+        {% for error in form.card_name.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.number.label }}
+        {{ form.number() }}
+        {% for error in form.number.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.expiry.label }}
+        {{ form.expiry() }}
+        {% for error in form.expiry.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.cvc.label }}
+        {{ form.cvc() }}
+        {% for error in form.cvc.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+    </form>
+    
+{% endblock %} 

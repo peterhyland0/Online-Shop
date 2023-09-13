@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.admin_id.label }}
+        {{ form.admin_id() }}
+        {% for error in form.admin_id.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.admin_password.label }}
+        {{ form.admin_password() }}
+        {% for error in form.admin_password.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+    </form>
+    <p>
+        username: Shopkeeper,
+        password: 123
+    </p>
+    
+{% endblock %} 

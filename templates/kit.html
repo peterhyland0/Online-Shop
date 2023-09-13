@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>{{ kit["name"] }}</h1>
+    <p>
+        Price: {{ kit["price"] }}
+    </p>
+    <p>
+        {{ kit["description"] }}
+    </p>
+    <p>
+        <img src="{{ url_for ('static', filename=kit['image_name']) }}"></img>
+    </p>
+    <p>
+        <a href="{{ url_for('add_to_cart', kit_id=kit['kit_id']) }}">Add to cart</a>
+    </p>
+    <!-- <p>
+        <a href="{{ url_for('delete_from_cart', kit_id=kit['kit_id']) }}">Delete from cart</a>
+    </p> -->
+{% endblock %} 
